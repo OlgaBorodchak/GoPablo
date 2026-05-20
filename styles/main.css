@@ -158,7 +158,6 @@ main {
   color: hsl(0, 0%, 100%);
   font-size: clamp(4rem, 8vw, 8rem);
   line-height: 0.9;
-  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
@@ -211,6 +210,7 @@ main {
     position: fixed;
     top: var(--header-height);
     left: -101%;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -224,6 +224,7 @@ main {
 
   .nav-list.open {
     left: 0;
+    height: 100vh;
   }
 
   .nav-link {
