@@ -31,6 +31,7 @@ body {
   min-height: 100vh;
   color: hsl(240, 19%, 15%);
   font-size: clamp(1rem, 1.2vw, 1.125rem);
+  font-family: 'BDO Grotesk', sans-serif;
 }
 
 .container {
@@ -71,7 +72,7 @@ body {
 .nav-link {
   color: hsl(0, 0%, 100%);
   text-transform: uppercase;
-  font-family: 'BDO Grotesk';
+
   font-weight: 400;
   padding: 0.625em;
 }
@@ -170,7 +171,6 @@ main {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  font-family: 'BDO Grotesk';
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -215,7 +215,6 @@ main {
 
 .benefits{
   display: flex;
-
 }
 
 .benefit {
@@ -223,15 +222,17 @@ main {
   flex-direction: column;
   flex: 1;
   border-top: 1px solid hsl(0, 0%, 0%);
-  padding: 0 1.5rem;
 }
 
 .benefit:not(:last-child) {
   border-right: 1px solid hsl(0, 0%, 87%);
 }
 
+.benefit:not(:first-child) {
+  padding: 0 1.5rem;
+}
+
 .benefit span {
-  font-family: 'BDO Grotesk', sans-serif;
   font-weight: 500;
   font-size: 0.688rem;
   color: hsl(0, 0%, 73%);
@@ -272,12 +273,98 @@ main {
 }
 
 .benefit-description {
-  font-family: 'BDO Grotesk', sans-serif;
-  font-size: 0.875rem;
- 
-  
-   
+  font-size: 0.875rem; 
 }
+
+.services {
+  margin-top: 5em;
+}
+
+.services-eyebrow {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 60%);
+  font-size: 0.875rem;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.services-description {
+  max-width: 50ch;
+  width: 100%;
+}
+
+.services-list {
+  border-top: 1px hsl(0, 0%, 0%) solid;
+}
+
+.services-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+   gap: clamp(1.5rem, 4vw, 4rem);
+  padding: 2em 0;
+  border-bottom: 1px solid hsl(0, 0%, 87%);
+}
+
+.services-item:hover .services-item-cta {
+  background-color: hsl(0, 0%, 7%);
+}
+
+.services-item:hover .services-item-cta svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+
+.services-item-content {
+  flex: 1 1 40%;
+}
+
+.services-item-title {
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.625rem;
+  line-height: 1;
+}
+
+.services-item-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 60%;
+  gap: .8em;
+}
+
+.services-item-point {
+  border: 1px solid hsl(0, 0%, 87%);
+  padding: 0.25em 0.75em;
+  font-size: 0.75rem;
+  gap: 2em;
+}
+
+.services-item-cta {
+  width: 2.5em;
+  height: 2.5em;
+  border: 1px solid hsl(0, 0%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 @media (max-width: 1024px) {
   .nav-toggle {
@@ -354,4 +441,8 @@ main {
     border: none;
     border-bottom: 1px solid hsl(0, 0%, 87%);
   }
+
+  /* .benefit:not(:first-child) {
+  padding: 0 1.5rem;
+} */
 }
