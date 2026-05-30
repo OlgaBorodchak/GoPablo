@@ -1,7 +1,7 @@
 :root {
   --header-height: 7em;
   --container-padding: 2rem;
-  --accent: oklch(79.266% 0.14441 89.5);
+  --accent: hsl(45, 73%, 55%);
 }
 
 * {
@@ -201,6 +201,84 @@ main {
   transform: translateX(4px);
 }
 
+h2 {
+  font-family: 'Mango Grotesque';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-wrap: balance;
+  text-align: center;
+  padding: 2em 0;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.benefits{
+  display: flex;
+
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-top: 1px solid hsl(0, 0%, 0%);
+  padding: 0 1.5rem;
+}
+
+.benefit:not(:last-child) {
+  border-right: 1px solid hsl(0, 0%, 87%);
+}
+
+.benefit span {
+  font-family: 'BDO Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 0.688rem;
+  color: hsl(0, 0%, 73%);
+  margin: 1.25em 0;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  margin-bottom: 1em;
+}
+
+.benefit-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.divider {
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 1em;
+}
+
+.benefit-badge {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.625rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.benefit-description {
+  font-family: 'BDO Grotesk', sans-serif;
+  font-size: 0.875rem;
+ 
+  
+   
+}
+
 @media (max-width: 1024px) {
   .nav-toggle {
     display: flex;
@@ -255,5 +333,25 @@ main {
 
   .hero-content h1 {
     font-size: clamp(4.5rem, 14vw, 7rem);
+  }
+
+  h2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .benefits {
+    flex-direction: column;
+  }
+
+  .benefit {
+    padding: 1.5em 0;
+    border: none;
+  }
+
+  .benefit:not(:last-child) {
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
   }
 }
