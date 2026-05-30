@@ -201,7 +201,7 @@ main {
   transform: translateX(4px);
 }
 
-h2 {
+.about-header {
   font-family: 'Mango Grotesque';
   font-weight: 400;
   text-transform: uppercase;
