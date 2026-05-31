@@ -202,7 +202,7 @@ main {
 }
 
 .about {
-    background-color: hsl(0, 0%, 96%);
+  background-color: hsl(0, 0%, 96%);
 }
 
 .about-header {
@@ -217,7 +217,7 @@ main {
   margin: 0 auto;
 }
 
-.benefits{
+.benefits {
   display: flex;
   padding-bottom: 5.2em;
 }
@@ -278,25 +278,26 @@ main {
 }
 
 .benefit-description {
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
 }
 
 .services {
   padding-top: 5.3em;
 }
 
-.services-eyebrow {
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 5rem;
-  color: rgba(0, 0, 0, 0.05);
-
-}
-
 .services-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
 
+.services-eyebrow {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 3.756vw + 1.62rem, 5rem);
+  color: hsl(0, 0%, 78%);
+  white-space: nowrap;
 }
 
 .services-title {
@@ -305,6 +306,8 @@ main {
   font-size: clamp(2.5rem, 6vw, 4rem);
   text-transform: uppercase;
   line-height: 0.95;
+  margin-block: 0;
+  text-align: right;
 }
 
 .accent-text {
@@ -319,7 +322,7 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-   gap: clamp(1.5rem, 4vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 4rem);
   padding: 2em 0;
   border-bottom: 1px solid hsl(0, 0%, 87%);
 }
@@ -351,7 +354,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 60%;
-  gap: .8em;
+  gap: 0.8em;
 }
 
 .services-item-point {
@@ -370,6 +373,93 @@ main {
   justify-content: center;
 }
 
+.steps {
+  margin: 5.2em 0;
+  padding: 5.2em 0;
+}
+
+#steps {
+  background: #f5f5f5;
+}
+
+.steps-header {
+  text-transform: uppercase;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  padding-bottom: 1em;
+}
+
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  background: #d0d0d0;
+  gap: 2px;
+}
+
+.step {
+  background: #f5f5f5;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background 0.2s;
+}
+
+.step:hover {
+  background: hsl(0, 0%, 100%);
+}
+
+.wide-step {
+  grid-column: span 2;
+}
+
+.step-num {
+  color: hsl(0, 0%, 78%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: -16px;
+}
+
+.accent-bar {
+  width: 36px;
+  height: 3px;
+  background: var(--accent);
+  margin-bottom: 1.25em;
+}
+
+.step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.625rem;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+.step-description {
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 33%);
+  margin-bottom: 1.5em;
+}
+
+.step-tag {
+  border: 1px solid hsl(0, 0%, 60%);
+  color: hsl(0, 0%, 27%);
+  text-transform: uppercase;
+  font-size: 0.688rem;
+  letter-spacing: 0.1em;
+  padding: 0.375em 1em;
+}
+
+.step:hover .step-tag {
+  border-color: var(--accent);
+  color: hsl(45, 100%, 24%);
+}
 
 @media (max-width: 1024px) {
   .nav-toggle {
