@@ -201,6 +201,10 @@ main {
   transform: translateX(4px);
 }
 
+.about {
+    background-color: hsl(0, 0%, 96%);
+}
+
 .about-header {
   font-family: 'Mango Grotesque';
   font-weight: 400;
@@ -208,13 +212,14 @@ main {
   font-size: clamp(2.5rem, 6vw, 4rem);
   text-wrap: balance;
   text-align: center;
-  padding: 2em 0;
+  padding: 1.3em 0;
   width: 70%;
   margin: 0 auto;
 }
 
 .benefits{
   display: flex;
+  padding-bottom: 5.2em;
 }
 
 .benefit {
@@ -277,19 +282,21 @@ main {
 }
 
 .services {
-  margin-top: 5em;
+  padding-top: 5.3em;
 }
 
 .services-eyebrow {
   text-transform: uppercase;
-  color: hsl(0, 0%, 60%);
-  font-size: 0.875rem;
+  font-weight: 900;
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.05);
+
 }
 
 .services-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
 }
 
 .services-title {
@@ -302,11 +309,6 @@ main {
 
 .accent-text {
   color: var(--accent);
-}
-
-.services-description {
-  max-width: 50ch;
-  width: 100%;
 }
 
 .services-list {
@@ -322,6 +324,9 @@ main {
   border-bottom: 1px solid hsl(0, 0%, 87%);
 }
 
+.services-item:hover .services-item-title {
+  color: var(--accent);
+}
 .services-item:hover .services-item-cta {
   background-color: hsl(0, 0%, 7%);
 }
