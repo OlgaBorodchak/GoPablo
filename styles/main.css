@@ -534,7 +534,7 @@ main {
 .contact-input, 
 .contact-textarea {
   border: none;
-  border-bottom: 2px solid hsl(0, 0%, 87%);
+  border-bottom: 2px solid hsla(240, 19%, 15%, 1);
   outline: none;
   width: 100%;
   padding: 1em 0;
@@ -586,7 +586,7 @@ textarea {
 }
 
 .contact-btn {
-  border: 1px solid hsl(0, 0%, 60%);
+  border: 1px solid hsla(240, 19%, 15%, 1);
   background-color: transparent;
   font-family: inherit;
   text-transform: uppercase;
